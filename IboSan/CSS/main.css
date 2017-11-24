@@ -1,0 +1,522 @@
+/*Main.css
+*Author : Tim Prins
+*Website : www.ibosan.com
+*Date : 21-11-2017
+*/
+
+/*
+* Background color = #612F2F
+* Heading color = #612F2F
+*
+*/
+
+/* CSS index
+*1.0 Menubar and hero video
+***1.1 Hero video
+***1.2 Scroll down button
+***1.3 Red square with logo
+***1.4 Menu bar
+****************************************
+*2.0 Over ons
+****************************************
+*3.0 Trainers
+*4.0 Post
+*5.0
+**/
+
+body {
+    overflow-x: hidden;
+}
+/*
+***1.0 Menubar and hero video
+*/
+
+/*1.1 Hero video*/
+
+.unclickable {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.tv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.tv .screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.tv .screen.active {
+    opacity: 1;
+}
+/*
+***1.2 Scroll down button
+*/
+
+.demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 48%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+.demo a:hover {
+    opacity: .5;
+}
+#scroll-down a {
+    padding-top: 60px;
+}
+#scroll-down a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+#scroll-down a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+    0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes sdb10 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*
+***1.3 Red containter with logo
+*/
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #E16D6C;
+}
+.circle {
+    position: absolute;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    top: 175px;
+    left: 175px;
+    background: #fff;
+    border-radius: 50%;
+    animation: circle 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.line {
+    position: absolute;
+    z-index: 10;
+    width: 150px;
+    height: 4px;
+    top: 198px;
+    background: #fff;
+    transform: scaleX(0);
+}
+.line.left {
+    left: 50px;
+    transform-origin: 100% 50%;
+    animation: lines 1s ease-in-out 0.8s, line-left 1s steps(1) 0.8s;
+}
+.line.right {
+    right: 50px;
+    transform-origin: 0% 50%;
+    animation: lines 1s ease-in-out 0.8s, line-right 1s steps(1) 0.8s;
+}
+.big {
+    position: absolute;
+    z-index: 5;
+    top: 25px;
+    width: 400px;
+    text-align: center;
+}
+.big img {
+    width: 80%;
+}
+.hide {
+    position: absolute;
+    z-index: 7;
+    width: 400px;
+    height: 200px;
+    background: #E16D6C;
+    left: 0;
+    animation: reveal .4s ease-out 1.7s;
+    animation-fill-mode: both;
+}
+.hide.top {
+    bottom: 49%;
+    transform-origin: 50% 0%;
+}
+.hide.bottom {
+    top: 49%;
+    transform-origin: 50% 100%;
+}
+@keyframes circle {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    90%, 100% {
+        transform: scale(0);
+    }
+}
+@keyframes lines {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+@keyframes line-left {
+    0% {
+        transform-origin: 100% 50%;
+    }
+    50%, 100% {
+        transform-origin: 0% 50%;
+    }
+}
+@keyframes line-right {
+    0% {
+        transform-origin: 0% 50%;
+    }
+    50%, 100% {
+        transform-origin: 100% 50%;
+    }
+}
+@keyframes reveal {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+@keyframes small-top {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes small-bottom {
+    0% {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/*
+***1.4 Menu bar
+*/
+
+#menu {
+    width: 100%;
+}
+.menu {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    line-height: 1em;
+    margin: 15px 27%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    position: absolute;
+    /* make the navbar stick to the top
+position: fixed; 
+top: 0;
+z-index: 100;
+*/
+}
+.menu li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.5em 0.6em;
+    padding: 12px 15px;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+}
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu li:before, .menu li:after {
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    height: 2px;
+    width: 35%;
+    background-color: #E16D6C;
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+.menu li:before {
+    top: 0;
+    left: 0;
+}
+.menu li:after {
+    bottom: 0;
+    right: 0;
+}
+.menu li:hover:before, .menu li.hover:before, .menu li:hover:after, .menu li.hover:after {
+    opacity: 1;
+}
+.menu li:hover:before, .menu li.hover:before {
+    left: 65%;
+}
+.menu li:hover:after, .menu li.hover:after {
+    right: 65%;
+}
+/*
+***2.0 Over ons
+*/
+
+.over-ons-image {
+    display: block;
+    float: right;
+    max-height: 100vh;
+    min-width: 725px;
+    margin-right: -150px;
+}
+.title-over {
+    text-align: center;
+    font-weight: 300;
+    margin-left: 350px;
+    font-size: 60px;
+    -ms-transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+    padding-top: 100px;
+    color: #612F2F;
+}
+.paragraph {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    -ms-transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+    padding: 60px 80px 0px 260px;
+}
+.quote {
+    padding-top: 5%;
+    font-size: 40px;
+    margin-left: 300px;
+    float: right;
+    color: #612F2F;
+    -ms-transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+}
+.quote-author {
+    font-size: 27px;
+    margin-left: 800px;
+    color: #612F2F;
+    float: right;
+}
+.skewed-over {
+    display: block;
+    width: 80%;
+    height: 100vh;
+    margin-left: -200px;
+    background-color: #E16D6C;
+    -ms-transform: skewX(10deg);
+    -webkit-transform: skewX(10deg);
+    transform: skewX(10deg);
+    -webkit-box-shadow: 1px 1px 30px 1px rgba(225, 110, 108, 1);
+    -moz-box-shadow: 1px 1px 30px 1px rgba(225, 110, 108, 1);
+    box-shadow: 1px -4px 30px 0px rgba(225, 110, 108, 1);
+    border-bottom: thick solid #fff;
+}
+/*
+***3.0 Trainers
+*/
+
+.title-trainers {
+    text-align: center;
+    font-size: 60px;
+    color: #612F2F;
+    padding-top: 100px;
+}
+figure.snip1091 {
+    position: relative;
+    display: inline-block;
+    min-width: 220px;
+    max-width: 350px;
+    max-height: 350px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-size: 25px;
+}
+figure.snip1091 * {
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+figure.snip1091 img {
+    opacity: 0.5;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+figure.snip1091 figcaption {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    right: 30px;
+    -webkit-transform: rotate(0deg) translateY(-50%) scale(1);
+    transform: rotate(0deg) translateY(-50%) scale(1);
+    -webkit-transform-origin: center 0;
+    transform-origin: center 0;
+}
+figure.snip1091 figcaption h2 {
+    top: 50%;
+    letter-spacing: -1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0;
+    font-weight: 400;
+}
+figure.snip1091 figcaption h2 span {
+    font-weight: 800;
+}
+figure.snip1091 figcaption:before, figure.snip1091 figcaption:after {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    display: block;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+figure.snip1091 figcaption:before {
+    left: 0;
+    top: 0;
+}
+figure.snip1091 figcaption:after {
+    bottom: 0;
+    right: 0;
+}
+figure.snip1091.red {
+    background: #612F2F;
+}
+figure.snip1091:hover img, figure.snip1091.hover img {
+    opacity: 1;
+}
+figure.snip1091:hover figcaption, figure.snip1091.hover figcaption {
+    -webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);
+    transform: rotate(-45deg) translateY(-50%) scale(0.9);
+}
+figure.snip1091:hover figcaption:before, figure.snip1091.hover figcaption:before, figure.snip1091:hover figcaption:after, figure.snip1091.hover figcaption:after {
+    width: 200%;
+}
+.paragraph-trainers {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #612F2F;
+    color: #612F2F;
+    padding: 25px 20px 25px 20px; 
+}
+.trainer-header {
+    font-size: 30px;
+    color: #612F2F;
+}
+
+
+/*
+***4.0 Rooster
+*/
+
+.title-rooster {
+    text-align: center;
+}

@@ -1,0 +1,72 @@
+/*Main.css
+*Author : Tim Prins
+*Website : www.sanjaysoekhoe.com
+*Date : 21-11-2017
+*/
+
+/* CSS index
+*1.0 Menubar
+*2.0 Post title 
+*3.0 About
+*4.0 Post
+*5.0
+**/
+
+/*1.0 Menubar*/
+/*1.0 Menubar*/
+/*1.0 Menubar*/
+
+/*2.0 Post title*/
+/*2.0 Post title*/
+/*2.0 Post title*/
+
+.post-title,
+.post-subtitle {
+    text-align: center;
+    padding: 24px 0 0 0;
+}
+
+h1.post-title {
+    font-size: 72px;
+    padding: 24px 0 0 0;
+}
+
+h2.post-subtitle {
+    font-size: 48px;
+}
+
+
+/*Horizontal line to seperate post title and post content*/
+
+hr {
+    margin: 24px;
+    border: 0;
+    height: 1.1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #d3d3d3, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #d3d3d3, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #d3d3d3, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #d3d3d3, #f0f0f0);
+}
+
+/*3.0 About*/
+/*3.0 About*/
+/*3.0 About*/
+
+div.about {
+    margin: 24px 0px 0px 48px;
+}
+
+h3.post-author {}
+
+h3.post-date {
+    color: #d3d3d3;
+}
+
+.post-author-name {
+    color: red;
+    text-decoration: none;
+}
+
+/*4.0 Post*/
+/*4.0 Post*/
+/*4.0 Post*/
