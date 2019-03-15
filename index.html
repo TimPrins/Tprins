@@ -1,1 +1,119 @@
-<!doctype html><html lang="en"><head> <meta charset="utf-8"> <title>Tim Prins</title> <meta name="description" content=""> <meta name="author" content=""> <link rel="stylesheet" href="main.css"> <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"> <!--[if lt IE 9]> <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script> <![endif]--></head><body> <div class="sticky"> <div class="grid grid-pad"> <div class="col-1-1"> <a class="tPrins" href="/">Tim Prins</a> <ul> <li><a href="#about">About</a></li> <li><a href="#cv">CV</a></li> <li><a href="#contact">Contact</a></li> </ul> </div> </div> </div> <div data-aos="fade-up"> <h1 class="motivational">The thing<br> that is important<br> is the thing<br> that is not seen.</h1> </div> <a class="arrow" href="#about"></a> <div class="grid grid-pad"> <div class="col-1-1" id="about"> <h2 class="uppercase me1">About</h2> </div> <div class="col-2-3" data-aos="fade-up" data-aos-delay="100"> <h3>I design and build responsive website's. Responsive design allows your website to adapt to the device your users are viewing it on. It provides you with the capability to write once publish everywhere, meaning less work for you. </h3> </div> <div class="col-1-3"> <figure class="device"> <figcaption class="ir"> </figcaption> </figure> </div> <div class="col-1-1" id="cv"> <h2 class="uppercase me1">CV</h2> </div> <div class="col-1-1"> <div class="container1"> <code contentEditable="false"> <p><span class="blue">var</span> name = "Tim Prins";</p> <p><span class="blue">var</span> age = 22;</p> <p><span class="blue">var</span> hometown = "Rotterdam";</p> <p><span class="blue">var</span> availableForWork = True;</p> <p> </p> <p><span class="blue">class</span> experience{</p> <p>    <span class="red">constructor</span>(companyName, period, jobTitle){</p> <p>       <span class="blue">this</span>.job = "Delta Logistiek, 2009 - 2016, warehouse employee";</p> <p>       <span class="blue">this</span>.job = "Snackbar Shirley, 2016, webdeveloper";</p> <p>       <span class="blue">this</span>.job = "Restaurant Mazi-mas, 2016, webdeveloper";</p> <p>       <span class="blue">this</span>.job = "Stichting NederlandStaat, 2017, webdeveloper";</p> <p>       <span class="blue">this</span>.job = "A & O fonds overheid, 2017, webdeveloper";</p> <p>       <span class="blue">this</span>.job = "Work.Boost, 2017, webdeveloper";</p> <p>       <span class="blue">this</span>.job = "Stichting H.U.L.P., 2017, webdeveloper";</p> <p>    }</p> <p>}</p> <p> </p> <p><span class="blue">class</span> education{</p> <p>    <span class="red">constructor</span>(schoolName, degree, graduatedIn){</p> <p>       <span class="blue">this</span>.school = "Zadkine, MBO, 2017";</p> <p>       <span class="blue">this</span>.school = "Hogeschool Rotterdam, Bachelor, Currently studying";</p> <p>    }</p> <p>}</p> <p> </p> </code> </div> </div> <div class="col-1-1" id="contact"> <h2 class="uppercase me1">Contact</h2> </div> <div class="col-2-12"></div> <div class="col-8-12"> <div class="container"> <h1 style="text-align: center; font-size: 400%;">Let's work together!</h1> <form name="contact" class="form" data-netlify="true"> <h1 class="labels">Name</h1><input type="text" name="Name" placeholder="Name"> <h1 class="labels">E-mail</h1><input type="text" name="E-mail" placeholder="e-mail"> <h1 class="labels">Phone</h1><input type="text" name="Phone" placeholder="Phone"> <button type="submit" id="login-button">Send!</button> </form> </div> </div> </div> <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <script> AOS.init({ duration: 1200, }); </script> <script> $(document).ready(function() { $('a[href^="#"]').on('click', function(e) { e.preventDefault(); var target = this.hash; var $target = $(target); $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 900, 'swing', function() { window.location.hash = target; }); }); }); $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 900, 'swing'); </script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tim Prins</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
+    <!--[if lt IE 9]> <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script> <![endif]-->
+</head>
+
+<body>
+    <div class="sticky">
+        <div class="grid grid-pad">
+            <div class="col-1-1"> <a class="tPrins" href="/">Tim Prins</a>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-up">
+        <h1 class="motivational">The thing<br> that is important<br> is the thing<br> that is not seen.</h1>
+    </div> <a class="arrow" href="#about"></a>
+    <div class="grid grid-pad">
+        <div class="col-1-1" id="about">
+            <h2 class="uppercase me1">About</h2>
+        </div>
+        <div class="col-2-3" data-aos="fade-up" data-aos-delay="100">
+            <h3>I design and build responsive website's. Responsive design allows your website to adapt to the device
+                your users are viewing it on. It provides you with the capability to write once publish everywhere,
+                meaning less work for you. </h3>
+        </div>
+        <div class="col-1-3">
+            <figure class="device">
+                <figcaption class="ir"> </figcaption>
+            </figure>
+        </div>
+        <div class="col-1-1" id="cv">
+            <h2 class="uppercase me1">CV</h2>
+        </div>
+        <div class="col-1-1">
+            <div class="container1"> <code contentEditable="false">
+                    <p><span class="blue">var</span> name = "Tim Prins";</p>
+                    <p><span class="blue">var</span> age = 22;</p>
+                    <p><span class="blue">var</span> hometown = "Rotterdam";</p>
+                    <p><span class="blue">var</span> availableForWork = True;</p>
+                    <p> </p>
+                    <p><span class="blue">class</span> experience{</p>
+                    <p> <span class="red">constructor</span>(companyName, period, jobTitle){</p>
+                    <p> <span class="blue">this</span>.job = "Delta Logistiek, 2009 - 2016, warehouse employee";</p>
+                    <p> <span class="blue">this</span>.job = "Snackbar Shirley, 2016, webdeveloper";</p>
+                    <p> <span class="blue">this</span>.job = "Restaurant Mazi-mas, 2016, webdeveloper";</p>
+                    <p> <span class="blue">this</span>.job = "Stichting NederlandStaat, 2017, webdeveloper";</p>
+                    <p> <span class="blue">this</span>.job = "A & O fonds overheid, 2017, webdeveloper";</p>
+                    <p> <span class="blue">this</span>.job = "Work.Boost, 2017, webdeveloper";</p>
+                    <p> <span class="blue">this</span>.job = "Stichting H.U.L.P., 2017, webdeveloper";</p>
+                    <p> }</p>
+                    <p>}</p>
+                    <p> </p>
+                    <p><span class="blue">class</span> education{</p>
+                    <p> <span class="red">constructor</span>(schoolName, degree, graduatedIn){</p>
+                    <p> <span class="blue">this</span>.school = "Zadkine, MBO, 2017";</p>
+                    <p> <span class="blue">this</span>.school = "Hogeschool Rotterdam, Bachelor, Currently studying";</p>
+                    <p>   Multiple courses in developing software and algorithms, analysing systems and problems, bussines skills and projects.</p>
+                    <p>  <span class="blue">this</span>.project = "Muziek webshop flying marshmallows";</p>
+                    <p>  <span class="blue">this</span>.project = "Emerging technologies project JustGo";</p>
+                    <p> }</p>
+                    <p>}</p>
+                    <p> </p>
+                </code> </div>
+        </div>
+        <div class="col-1-1" id="contact">
+            <h2 class="uppercase me1">Contact</h2>
+        </div>
+        <div class="col-2-12"></div>
+        <div class="col-8-12">
+            <div class="container">
+                <h1 style="text-align: center; font-size: 400%;">Let's work together!</h1>
+                <form name="contact" class="form" data-netlify="true">
+                    <h1 class="labels">Name</h1><input type="text" name="Name" placeholder="Name">
+                    <h1 class="labels">E-mail</h1><input type="text" name="E-mail" placeholder="e-mail">
+                    <h1 class="labels">Phone</h1><input type="text" name="Phone" placeholder="Phone"> <button type="submit"
+                        id="login-button">Send!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing');
+    </script>
+</body>
+
+</html>
